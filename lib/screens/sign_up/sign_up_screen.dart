@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/screens/sign_up/have_account.dart';
 import 'package:myapp/screens/sign_up/sign_up_form.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -41,9 +40,8 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      const SignUpForm(),
+                      SignUpForm(),
                       const SizedBox(height: 20),
-                      const HaveAccount(),
                     ],
                   )
                 )

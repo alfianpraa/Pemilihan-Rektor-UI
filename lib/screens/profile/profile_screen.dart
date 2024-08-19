@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/config/authentication_repository.dart';
 import 'package:myapp/screens/profile/components/contact.dart';
 import 'package:myapp/screens/profile/profile_button.dart';
-import 'package:myapp/screens/sign_in/sign_in_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   static String routeName = "/profile";
@@ -49,12 +49,7 @@ class ProfileScreen extends StatelessWidget {
             ProfileButton(
               icon: "assets/icon/logout.svg",
               text: "Log Out",
-              press: () => {
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                  SignInscreen.routeName,
-                  (route) => false,
-                ),
-              },
+              press: () => {AuthenticationRepository.instance.signOut()},
             ),
           ],
         ),

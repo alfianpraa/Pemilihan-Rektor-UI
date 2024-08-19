@@ -25,19 +25,20 @@ class _PersyaratanState extends State<Persyaratan> {
             ),
           ),
           const SizedBox(height: 10),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                OutlinedButton(
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton(
                     onPressed: () => persyaratanUmumBuilder(context),
                     child: const Text("Persyaratan Umum")),
-                const SizedBox(width: 10),
-                OutlinedButton(
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: OutlinedButton(
                     onPressed: () => persyaratanAdminBuilder(context),
                     child: const Text("Persyaratan Administrasi")),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),

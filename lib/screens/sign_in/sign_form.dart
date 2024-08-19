@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/config/validator.dart';
 import 'package:myapp/screens/init/initial_screen.dart';
 
 class SignForm extends StatefulWidget {
@@ -38,28 +37,28 @@ class _SignFormState extends State<SignForm> {
         key: _keyform,
         child: Column(
           children: [
-            TextFormField(
+            TextFormField(              
               keyboardType: TextInputType.emailAddress,
-              onSaved: (newValue) => email = newValue,
-              onChanged: (value) {
-                if (value.isNotEmpty) {
-                  removeError(error: kEmailNullError);
-                }
-                if (emailValidatorRegExp.hasMatch(value)) {
-                  removeError(error: kInvalidEmailError);
-                }
-                return;
-              },
-              validator: (value) {
-                if (value!.isEmpty) {
-                  addError(error: kEmailNullError);
-                  return "";
-                } else if (!emailValidatorRegExp.hasMatch(value)) {
-                  addError(error: kInvalidEmailError);
-                  return "";
-                }
-                return null;
-              },
+              // onSaved: (newValue) => email = newValue,
+              // onChanged: (value) {
+              //   if (value.isNotEmpty) {
+              //     removeError(error: kEmailNullError);
+              //   }
+              //   if (emailValidatorRegExp.hasMatch(value)) {
+              //     removeError(error: kInvalidEmailError);
+              //   }
+              //   return;
+              // },
+              // validator: (value) {
+              //   if (value!.isEmpty) {
+              //     addError(error: kEmailNullError);
+              //     return "";
+              //   } else if (!emailValidatorRegExp.hasMatch(value)) {
+              //     addError(error: kInvalidEmailError);
+              //     return "";
+              //   }
+              //   return null;
+              // },
               decoration: const InputDecoration(
                   labelText: 'Email',
                   hintText: 'Enter your email',
@@ -73,25 +72,25 @@ class _SignFormState extends State<SignForm> {
             const SizedBox(height: 20),
             TextFormField(
               obscureText: true,
-              onSaved: (newValue) => password = newValue,
-              onChanged: (value) {
-                if (value.isNotEmpty) {
-                  removeError(error: kPassNullError);
-                } else if (value.length >= 8) {
-                  removeError(error: kShortPassError);
-                }
-                return;
-              },
-              validator: (value) {
-                if (value!.isEmpty) {
-                  addError(error: kPassNullError);
-                  return "";
-                } else if (value.length < 8) {
-                  addError(error: kShortPassError);
-                  return "";
-                }
-                return null;
-              },
+              // onSaved: (newValue) => password = newValue,
+              // onChanged: (value) {
+              //   if (value.isNotEmpty) {
+              //     removeError(error: kPassNullError);
+              //   } else if (value.length >= 8) {
+              //     removeError(error: kShortPassError);
+              //   }
+              //   return;
+              // },
+              // validator: (value) {
+              //   if (value!.isEmpty) {
+              //     addError(error: kPassNullError);
+              //     return "";
+              //   } else if (value.length < 8) {
+              //     addError(error: kShortPassError);
+              //     return "";
+              //   }
+              //   return null;
+              // },
               decoration: const InputDecoration(
                   labelText: 'Password',
                   hintText: 'Enter your password',

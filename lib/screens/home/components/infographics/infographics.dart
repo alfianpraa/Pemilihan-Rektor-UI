@@ -33,26 +33,36 @@ class _InfographicsState extends State<Infographics> {
           const SizedBox(
               width: double.infinity,
               child: Text("Berita", style: TextStyle(fontSize: 20))),
-          Row(
-            children: [
-              InfographicsCard(
-                  press: () => _launchUrl(
-                      Uri.parse(
-                          "https://mwa.ui.ac.id/2024/06/22/pengumuman-hasil-seleksi-anggota-panitia-penjaringan-dan-penyaringan-calon-rektor-p3cr-ui-periode-2024-2029/"),
-                      false),
-                  title:
-                      'Hasil Seleksi Anggota Panitia Penjaringan dan Penyaringan Calon Rektor (P3CR) UI periode 2024–2029',
-                  image: 'assets/images/Pengumuman P3CR Terpilih.png'),
-              const SizedBox(width: 15),
-              InfographicsCard(
-                  press: () => _launchUrl(
-                      Uri.parse(
-                          "https://www.ui.ac.id/universitas-indonesia-memanggil-putra-putri-terbaik-sebagai-calon-rektor-ui-periode-2024-2029/"),
-                      false),
-                  title:
-                      'Universitas Indonesia Memanggil Putra/Putri Terbaik Sebagai Calon Rektor UI Periode 2024-2029',
-                  image: 'assets/images/Pemanggilan Calon Rektor.png')
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                InfographicsCard(
+                    press: () => _launchUrl(
+                        Uri.parse(
+                            "https://mwa.ui.ac.id/2024/06/22/pengumuman-hasil-seleksi-anggota-panitia-penjaringan-dan-penyaringan-calon-rektor-p3cr-ui-periode-2024-2029/"),
+                        false),
+                    title:
+                        'Hasil Seleksi Anggota Panitia Penjaringan dan Penyaringan Calon Rektor (P3CR) UI periode 2024–2029',
+                    image: 'assets/images/Pengumuman P3CR Terpilih.png'),
+                InfographicsCard(
+                    press: () => _launchUrl(
+                        Uri.parse(
+                            "https://www.ui.ac.id/universitas-indonesia-memanggil-putra-putri-terbaik-sebagai-calon-rektor-ui-periode-2024-2029/"),
+                        false),
+                    title:
+                        'Universitas Indonesia Memanggil Putra/Putri Terbaik Sebagai Calon Rektor UI Periode 2024-2029',
+                    image: 'assets/images/Pemanggilan Calon Rektor.png'),
+                InfographicsCard(
+                    press: () => _launchUrl(
+                        Uri.parse(
+                            "https://www.ui.ac.id/ui-buka-pendaftaran-panitia-penjaringan-dan-penyaringan-calon-rektor-ui-periode-2024-2029/"),
+                        false),
+                    title:
+                        'UI Membuka Pendaftaran Panitia Penjaringan dan Penyaringan Calon Rektor UI Periode 2024-2029',
+                    image: 'assets/images/panitia.jpeg')
+              ],
+            ),
           ),
         ],
       ),

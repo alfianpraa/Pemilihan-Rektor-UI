@@ -28,9 +28,9 @@ class AppTheme {
           backgroundColor: thirdColor,
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
-          style: ButtonStyle(
-              foregroundColor: WidgetStateProperty.all(Colors.black),
-              backgroundColor: WidgetStateProperty.all(secondaryColor)),
+          style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.black,
+              backgroundColor: secondaryColor),
         ),
         textButtonTheme: const TextButtonThemeData(
             style: ButtonStyle(

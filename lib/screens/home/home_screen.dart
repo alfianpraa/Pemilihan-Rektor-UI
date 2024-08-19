@@ -26,15 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
             "Apakah Anda Rektor UI Berikutnya?",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 10),
-            child: SizedBox(
-              width: double.infinity,
-              child: Text(
-                "-Pemilihan Rektor UI 2024-2029",
-                style: TextStyle(fontSize: 14),
-              ),
-            ),
+          Text(
+            "Pemilihan Rektor UI 2024-2029",
+            style: TextStyle(fontSize: 14),
           ),
           Infographics(),
           Timeline(),

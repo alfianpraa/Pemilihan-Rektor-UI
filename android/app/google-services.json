@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "748220948846",
+    "project_id": "pilrek-ui-c95c0",
+    "storage_bucket": "pilrek-ui-c95c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748220948846:android:1728b4828a1841db76217f",
+        "android_client_info": {
+          "package_name": "example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEu432Th7xGE2PS-rSMJLDmdxn8pYLzo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
