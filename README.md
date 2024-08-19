@@ -1,10 +1,6 @@
-# myapp
+#pemilihanrektorui2024
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
+This project aims to support the process of selecting the Rector of Universitas Indonesia (UI) by providing a transparent and efficient platform to manage, monitor, and participate in the UI rector election. This repository includes various integrated software components, including web applications, APIs, and the necessary documentation for the upcoming university leadership election.
 
 A few resources to get you started if this is your first Flutter project:
 
