@@ -44,7 +44,11 @@ class _InfographicsState extends State<Infographics> {
                       'Hasil Seleksi Anggota Panitia Penjaringan dan Penyaringan Calon Rektor (P3CR) UI periode 2024–2029',
                   image: 'assets/images/Pengumuman P3CR Terpilih.png'),
               const SizedBox(width: 15),
-              const InfographicsCard(
+              InfographicsCard(
+                  press: () => _launchUrl(
+                      Uri.parse(
+                          "https://www.ui.ac.id/universitas-indonesia-memanggil-putra-putri-terbaik-sebagai-calon-rektor-ui-periode-2024-2029/"),
+                      false),
                   title:
                       'Universitas Indonesia Memanggil Putra/Putri Terbaik Sebagai Calon Rektor UI Periode 2024-2029',
                   image: 'assets/images/Pemanggilan Calon Rektor.png')
