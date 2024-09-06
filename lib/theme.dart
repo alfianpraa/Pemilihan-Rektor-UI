@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//color
 const primaryColor = Color.fromRGBO(255, 251, 218, 1);
 const secondaryColor = Color.fromRGBO(255, 187, 112, 1);
 const thirdColor = Color.fromRGBO(255, 236, 168, 1);
@@ -29,8 +30,7 @@ class AppTheme {
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: OutlinedButton.styleFrom(
-              foregroundColor: Colors.black,
-              backgroundColor: secondaryColor),
+              foregroundColor: Colors.black, backgroundColor: secondaryColor),
         ),
         textButtonTheme: const TextButtonThemeData(
             style: ButtonStyle(

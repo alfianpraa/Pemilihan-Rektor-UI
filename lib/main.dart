@@ -1,8 +1,9 @@
 import 'package:email_otp/email_otp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/config/routes.dart';
-import 'package:myapp/screens/splash/splash_screen.dart';
+import 'package:myapp/users/config/userPreferences/user_preferences.dart';
+import 'package:myapp/users/screens/init/initial_screen.dart';
+import 'package:myapp/users/screens/splash/splash_screen.dart';
 import 'package:myapp/theme.dart';
 
 void main() {
@@ -13,9 +14,7 @@ void main() {
     otpLength: 6,
     otpType: OTPType.numeric,
   );
-  // WidgetsFlutterBinding.ensureInitialized();
-  // Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
-  //     .then((value) => Get.put(AuthenticationRepository()));
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -25,9 +24,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme.lightTheme(context),
-        initialRoute: SplashScreen.routeName,
-        routes: routes);
+      title: "Pemilihan Rektor UI 2024-2029",
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme(context),
+      home: FutureBuilder(
+          future: RememberUserPreferences.readUserInfo(),
+          builder: (context, dataSnapShot) {
+            if (dataSnapShot.data == null) {
+              return const SplashScreen();
+            } else {
+              return const InitialScreen();
+            }
+          }),
+    );
   }
 }
