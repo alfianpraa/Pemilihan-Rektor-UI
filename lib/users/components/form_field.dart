@@ -24,21 +24,40 @@ class Format extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      onChanged: onChanged,
-        keyboardType: keyboardType,
-        decoration: InputDecoration(
-            suffixIcon: suffix,
-            labelText: labelText,
-            hintText: hintText,
-            floatingLabelBehavior: FloatingLabelBehavior.always,
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-            border: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-            )),
-        controller: controller,
-        obscureText: obscureText ?? false,
-        validator: validator);
+    return Column(
+      children: [
+        TextFormField(
+            cursorColor: Colors.black,
+            onChanged: onChanged,
+            keyboardType: keyboardType,
+            decoration: InputDecoration(
+              suffixIcon: suffix,
+              labelText: labelText,
+              labelStyle: const TextStyle(color: Colors.black),
+              hintStyle: const TextStyle(color: Colors.grey),
+              hintText: hintText,
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+              border: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              focusedBorder: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              enabledBorder: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                borderSide: BorderSide(color: Colors.black),
+              ),
+              errorBorder: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                borderSide: BorderSide(color: Colors.red),
+              ),
+            ),
+            controller: controller,
+            obscureText: obscureText ?? false,
+            validator: validator),
+      ],
+    );
   }
 }

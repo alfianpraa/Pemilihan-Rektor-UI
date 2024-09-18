@@ -41,7 +41,7 @@ class _SignFormState extends State<SignForm> {
           User userInfo = User.fromJson(resBodySignIn["userData"]);
           await RememberUserPreferences.storeUserInfo(userInfo);
 
-          Future.delayed(const Duration(seconds: 5), () {
+          Future.delayed(const Duration(seconds: 2), () {
             Get.offAll(() => const InitialScreen());
           });
         } else {
@@ -93,6 +93,9 @@ class _SignFormState extends State<SignForm> {
         ),
         const SizedBox(height: 20),
         ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            minimumSize: const Size(200, 50),
+          ),
           onPressed: () {
             if (formKey.currentState!.validate()) {
               userLogin();

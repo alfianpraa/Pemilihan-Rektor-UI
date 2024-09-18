@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 import 'package:myapp/theme.dart';
 import 'package:myapp/users/config/userPreferences/current_user.dart';
 import 'package:myapp/users/screens/profile/components/sign_out.dart';
-import 'package:myapp/users/screens/profile/profile_widget.dart';
+import 'package:myapp/users/screens/profile/components/profile_widget.dart';
+import 'package:myapp/users/screens/profile/edit_profile.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -13,6 +14,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+
   final CurrentUser _currentUser = Get.put(CurrentUser());
 
   @override
@@ -37,7 +39,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ProfileButton(
                 name: "Edit Profile",
                 color: secondaryColor,
-                onTap: () {},
+                onTap: () {
+                  Get.to(EditProfile());
+                },
               ),
               ProfileButton(
                 name: "Logout",

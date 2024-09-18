@@ -28,5 +28,6 @@ class User {
         "email": email,
         "password": password,
         "phone": phone,
+
       };
 }

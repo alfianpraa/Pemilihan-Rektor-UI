@@ -7,6 +7,7 @@ import 'package:myapp/users/components/form_field.dart';
 import 'package:http/http.dart' as http;
 import 'package:myapp/users/config/api.dart';
 import 'package:myapp/users/models/user.dart';
+import 'package:myapp/users/screens/sign_in/sign_in_screen.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -17,6 +18,7 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   var formKey = GlobalKey<FormState>();
+
   var fullname = TextEditingController();
   var email = TextEditingController();
   var password = TextEditingController();
@@ -70,6 +72,7 @@ class _SignUpFormState extends State<SignUpForm> {
             phone.clear();
             confirmPassword.clear();
           });
+          Get.offAll(() => SignInscreen());
         } else {
           Fluttertoast.showToast(msg: "Some error issues");
         }
@@ -187,108 +190,3 @@ class _SignUpFormState extends State<SignUpForm> {
     );
   }
 }
-
-// import 'package:flutter/material.dart';
-// import 'package:get/get.dart';
-// import 'package:myapp/components/form_field.dart';
-// import 'package:myapp/screens/init/initial_screen.dart';
-
-
-// class SignUpForm extends StatefulWidget {
-//   const SignUpForm({Key? key}) : super(key: key);
-
-//   @override
-//   State<SignUpForm> createState() => _SignUpFormState();
-// }
-
-// class _SignUpFormState extends State<SignUpForm> {
-//   var newFullName = '';
-//   var newEmail = '';
-//   var newPassword = '';
-//   var newPhone = '';
-
-//   Future<void> _insert() async {
-//     print("Connecting to MySQL Server...");
-//     final conn = await MySQLConnection.createConnection(
-//       host: "127.0.0.1",
-//       port: 3306,
-//       userName: "root",
-//       password: "",
-//       databaseName: "pilrek-ui",
-//     );
-
-//     await conn.connect();
-//     print("Database Connected");
-
-//     var res = await conn.execute(
-//       "INSERT INTO users (id, fullname, email, password, phone) VALUES (':id,':fullname',':email', ':password',':phone')",
-//       {
-//         'id': null, //if you set it auto increment
-//         'fullname': newFullName,
-//         'email': newEmail,
-//         'password': newPassword,
-//         'phone': newPhone,
-//       },
-//     );
-//     print(res.affectedRows);
-
-//     await conn.close();
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       children: [
-//         //fullname
-//         Format(
-//             keyboardType: TextInputType.name,
-//             hintText: 'Enter your fullname',
-//             labelText: 'Fullname',
-//             onChanged: (text) {
-//               newFullName = text;
-//             }),
-//         const SizedBox(height: 20),
-
-//         //email
-//         Format(
-//           keyboardType: TextInputType.emailAddress,
-//           labelText: 'Email',
-//           hintText: 'Enter your email',
-//           onChanged: (String text) {
-//             newEmail = text;
-//           },
-//         ),
-//         const SizedBox(height: 20),
-
-//         //password
-//         Format(
-//           obscureText: true,
-//           labelText: 'Password',
-//           hintText: 'Enter your password',
-//           onChanged: (text) {
-//             newPassword = text;
-//           },
-//         ),
-//         const SizedBox(height: 20),
-
-//         //phone number
-//         Format(
-//           keyboardType: TextInputType.phone,
-//           labelText: 'Phone Number',
-//           hintText: 'Enter your phone number',
-//           onChanged: (text) {
-//             newPhone = text;
-//           },
-//         ),
-//         const SizedBox(height: 20),
-//         ElevatedButton(
-//           onPressed: () async {
-//             _insert();
-//             Get.offAll(() => const InitialScreen());
-//           },
-//           child: const Text('Confirm'),
-//         ),
-//       ],
-//     );
-//   }
-// }

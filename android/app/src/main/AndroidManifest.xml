@@ -2,7 +2,9 @@
 <!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:3780394949. -->
 <!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:2394545302. -->
 <!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:3843970837. -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:label="myapp"
         android:name="${applicationName}"

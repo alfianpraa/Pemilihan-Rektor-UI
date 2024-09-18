@@ -14,18 +14,16 @@ class AppTheme {
         scaffoldBackgroundColor: primaryColor,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
+            minimumSize: Size(200, 50),
             elevation: 2,
             foregroundColor: Colors.black,
             backgroundColor: secondaryColor,
-            minimumSize: const Size(250, 50),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
           ),
         ),
-        // ignore: prefer_const_constructors
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          // ignore: prefer_const_constructors
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           backgroundColor: thirdColor,
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
