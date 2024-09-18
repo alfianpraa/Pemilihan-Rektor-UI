@@ -21,7 +21,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 100),
+      padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 100),
       child: Center(
           child: Column(
         children: [

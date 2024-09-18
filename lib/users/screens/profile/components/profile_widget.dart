@@ -15,7 +15,7 @@ class ProfileBox extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Container(
-        width: 210,
+        width: double.infinity,
         height: 40,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),

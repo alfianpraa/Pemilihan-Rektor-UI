@@ -53,6 +53,7 @@ class _SignUpFormState extends State<SignUpForm> {
       email.text.trim(),
       password.text.trim(),
       phone.text.trim(),
+      
     );
 
     try {

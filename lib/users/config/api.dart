@@ -7,4 +7,5 @@ class Api {
   static String adminLoginApi = "$serverConnect/admin_sign_in.php";
   static String updateProfileApi = "$serverConnect/update_profile.php";
   static String viewUsersApi = "$serverConnect/view_users.php";
+  static String manageUsersApi = "$serverConnect/manage_users.php";
 }

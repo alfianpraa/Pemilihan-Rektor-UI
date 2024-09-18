@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:myapp/admin/screens/view_users.dart';
 import 'package:myapp/theme.dart';
+import 'package:myapp/users/screens/splash/splash_screen.dart';
 
 class AdminDashboardScreen extends StatelessWidget {
   @override
@@ -46,8 +48,7 @@ class AdminDashboardScreen extends StatelessWidget {
               leading: Icon(Icons.close),
               title: Text('Log Out'),
               onTap: () {
-                Navigator.pop(context); // Tutup drawer
-                // Navigasi ke halaman tentang
+                Get.offAll(() => const SplashScreen());
               },
             ),
           ],
