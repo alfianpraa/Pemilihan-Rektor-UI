@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myapp/admin/screens/view_registration.dart';
 import 'package:myapp/admin/screens/view_users.dart';
 import 'package:myapp/theme.dart';
 import 'package:myapp/users/screens/splash/splash_screen.dart';
@@ -40,7 +41,11 @@ class AdminDashboardScreen extends StatelessWidget {
               leading: Icon(Icons.file_copy),
               title: Text('List Registrasi Calon Rektor'),
               onTap: () {
-                Navigator.pop(context); // Tutup drawer
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ViewRegistration()),
+                ); // Tutup drawer
                 // Navigasi ke halaman pengaturan
               },
             ),
